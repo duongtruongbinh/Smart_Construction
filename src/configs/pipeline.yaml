@@ -1,0 +1,8 @@
+tz: Asia/Ho_Chi_Minh
+resample_rule: "1s"
+on_pct: 75
+off_pct: 60
+w_acc: 0.7
+w_gyro: 0.3
+debounce_sec: 10
+window_sec: 5
