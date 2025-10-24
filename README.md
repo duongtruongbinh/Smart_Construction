@@ -20,4 +20,4 @@ Configure input CSV paths inside `scripts/run_pipeline_rule_based.py` or wire a 
 - `src/configs/pipeline.yaml`: minimal configuration
 - `tests/`: basic contract tests
 ## Project Goals
-- Goal 1: ...
+- Goal 1: Implement rule-based classification.
