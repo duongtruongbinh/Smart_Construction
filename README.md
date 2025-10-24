@@ -19,3 +19,5 @@ Configure input CSV paths inside `scripts/run_pipeline_rule_based.py` or wire a 
 - `src/zen_pipelines/rule_based/pipeline.py`: the orchestrated pipeline
 - `src/configs/pipeline.yaml`: minimal configuration
 - `tests/`: basic contract tests
+## Project Goals
+- Goal 1: ...
