@@ -1,0 +1,12 @@
+read_csv:
+  sep: ","
+  header: 0
+  parse_dates:
+    - timestamp
+
+validate:
+  required_columns:
+    - timestamp
+    - ax
+    - ay
+    - az
