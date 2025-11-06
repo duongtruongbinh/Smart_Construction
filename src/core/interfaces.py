@@ -1,6 +1,7 @@
 from typing import Protocol, Any
 import pandas as pd
 
+
 class Predictor(Protocol):
     def fit(self, *args: Any, **kwargs: Any) -> Any: ...
     def predict_proba(self, df: pd.DataFrame) -> pd.Series: ...

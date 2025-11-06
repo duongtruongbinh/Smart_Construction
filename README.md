@@ -19,3 +19,27 @@ Configure input CSV paths inside `scripts/run_pipeline_rule_based.py` or wire a 
 - `src/zen_pipelines/rule_based/pipeline.py`: the orchestrated pipeline
 - `src/configs/pipeline.yaml`: minimal configuration
 - `tests/`: basic contract tests
+
+# 🏗️ Smart Construction
+
+This project contains a minimal **ZenML** pipeline for rule-based *Active / Idle* classification from IMU data (accelerometer + gyroscope).
+
+---
+
+## ⚡ Quickstart
+
+```bash
+# 1️⃣ Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate          # (Windows: .venv\Scripts\activate)
+
+# 2️⃣ Install dependencies
+pip install -r requirements.txt
+
+# 3️⃣ (Optional) Enable pre-commit checks for code quality
+pre-commit install
+pre-commit run --all-files
+
+# 4️⃣ Start ZenML server and run pipeline
+zenml up
+python -m scripts.run_pipeline_rule_based

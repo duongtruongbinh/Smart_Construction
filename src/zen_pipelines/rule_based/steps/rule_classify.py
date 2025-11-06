@@ -2,6 +2,7 @@ from zenml import step
 import pandas as pd
 from src.predictors.rule_based import RuleBasedPredictor
 
+
 @step(enable_cache=False)
 def rule_classify(
     train_hist: pd.DataFrame,
@@ -13,8 +14,13 @@ def rule_classify(
     debounce_sec: float = 10.0,
 ) -> pd.DataFrame:
     params = RuleBasedPredictor.fit_thresholds(
-        train_hist, on_pct=on_pct, off_pct=off_pct,
-        w_acc=w_acc, w_gyro=w_gyro, debounce_sec=debounce_sec, fs_ds=1.0
+        train_hist,
+        on_pct=on_pct,
+        off_pct=off_pct,
+        w_acc=w_acc,
+        w_gyro=w_gyro,
+        debounce_sec=debounce_sec,
+        fs_ds=1.0,
     )
     clf = RuleBasedPredictor(params)
     score = clf.predict_score(df1s)

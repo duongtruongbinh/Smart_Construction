@@ -7,13 +7,14 @@ from .steps.feature_window import feature_window
 from .steps.rule_classify import rule_classify
 from .steps.inference import persist_outputs
 
+
 @pipeline(name="smart_construction_rule_based")
 def rule_based_pipeline(train_csvs: list[str], infer_csvs: list[str]):
     df_train_raw = ingest(train_csvs)
     df_train_norm = normalize_ts(df_train_raw)
     df_train_clean = denoise(df_train_norm)
     df_train_1s = resample_1s(df_train_clean)
-    df_train_feat = feature_window(df_train_1s)
+    # _df_train_feat = feature_window(   df_train_1s )  # <- đổi tên để biểu thị cố ý không dùng
 
     df_raw = ingest(infer_csvs)
     df_norm = normalize_ts(df_raw)
