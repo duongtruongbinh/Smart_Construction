@@ -1,0 +1,15 @@
+read_csv:
+  sep: ","
+  header: 0
+  parse_dates:
+    - Timestamp
+
+validate:
+  required_columns:
+    - Timestamp
+    - Accel_x
+    - Accel_y
+    - Accel_z
+    - Gyro_x
+    - Gyro_y
+    - Gyro_z
