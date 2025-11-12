@@ -1,0 +1,1 @@
+import{j as o}from"./@radix-3bj3otF9.js";import{S as n}from"./chevron-down-smmnLxYI.js";function s({open:r}){return o.jsx(n,{className:` ${r?"":"-rotate-90"} size-5 shrink-0 rounded-md fill-neutral-500 transition-transform duration-200 hover:bg-neutral-200`})}export{s as C};
